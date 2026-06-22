@@ -1,294 +1,300 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>METRO SHOES | Real Style. Real Comfort.</title>
+<title>Metro Shoes | Real Style Real Comfort</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
 }
+
 body{
-background:#111;
-color:white;
-overflow-x:hidden;
+background:#ffffff;
+color:#111;
 }
+
 header{
-position:fixed;
-top:0;
-width:100%;
-z-index:1000;
-background:rgba(180,0,0,.95);
-backdrop-filter:blur(8px);
+background:#000;
 padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,.4);
+position:sticky;
+top:0;
+z-index:1000;
 }
+
 .logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
-.logo img{
 height:60px;
-border-radius:8px;
 }
-.logo h2{
-font-size:28px;
-font-weight:800;
-}
+
 nav a{
 color:white;
 text-decoration:none;
 margin-left:25px;
-font-weight:600;
-}
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
-url('banner1.jpeg');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-padding:0 8%;
-}
-.hero-content{
-max-width:700px;
-}
-.hero h1{
-font-size:70px;
-line-height:1;
-font-weight:800;
-margin-bottom:20px;
-}
-.hero span{
-color:#ff4040;
-}
-.hero p{
-font-size:22px;
-margin-bottom:30px;
-}
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:#e60000;
-color:white;
-text-decoration:none;
-font-weight:700;
-border-radius:50px;
+font-weight:500;
 transition:.3s;
 }
+
+nav a:hover{
+color:#ff2b2b;
+}
+
+.hero{
+height:90vh;
+background:url('banner1.jpeg') center center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+color:white;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:65px;
+font-weight:800;
+line-height:1.1;
+}
+
+.hero-content p{
+font-size:22px;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+background:#e60000;
+color:white;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+transition:.3s;
+}
+
 .btn:hover{
-transform:translateY(-3px);
+background:black;
 }
-.section{
-padding:90px 8%;
-}
-.title{
+
+.section-title{
 text-align:center;
 font-size:42px;
 margin-bottom:50px;
-color:white;
+color:#e60000;
+font-weight:800;
 }
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-.about img{
-width:100%;
-border-radius:15px;
-box-shadow:0 0 25px rgba(255,0,0,.4);
-}
-.about-text h3{
-font-size:36px;
-margin-bottom:15px;
-}
-.about-text p{
-font-size:18px;
-line-height:1.8;
-}
+
 .categories{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+padding:80px 8%;
+background:#fff;
 }
-.card{
-background:linear-gradient(135deg,#b00000,#5e0000);
-padding:35px;
-text-align:center;
-border-radius:15px;
-transition:.3s;
-}
-.card:hover{
-transform:translateY(-8px);
-}
-.card h3{
-font-size:24px;
-margin-bottom:10px;
-}
-.banner{
+
+.category-banner{
 width:100%;
 border-radius:20px;
-box-shadow:0 0 25px rgba(255,0,0,.4);
+box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
-.contact{
-background:#8b0000;
-text-align:center;
+
+.about{
 padding:80px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+background:#f7f7f7;
 }
+
+.about img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.about h2{
+font-size:40px;
+margin-bottom:20px;
+color:#e60000;
+}
+
+.about p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.contact{
+padding:80px 8%;
+background:black;
+color:white;
+text-align:center;
+}
+
 .contact h2{
 font-size:42px;
 margin-bottom:25px;
+color:#ff2b2b;
 }
+
 .contact p{
-font-size:20px;
+font-size:18px;
 margin:10px 0;
 }
+
 footer{
-background:black;
-padding:25px;
+background:#111;
+color:white;
 text-align:center;
-font-size:15px;
+padding:25px;
 }
+
 .whatsapp{
 position:fixed;
-right:20px;
 bottom:20px;
+right:20px;
 background:#25D366;
-width:65px;
-height:65px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:30px;
-text-decoration:none;
 color:white;
-box-shadow:0 0 15px rgba(0,0,0,.4);
-z-index:999;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
-@media(max-width:900px){
-header{
-flex-direction:column;
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:38px;
 }
-nav{
-margin-top:10px;
-}
-nav a{
-margin:0 8px;
-font-size:14px;
-}
-.hero h1{
-font-size:42px;
-}
+
 .about{
 grid-template-columns:1fr;
 }
-.title{
-font-size:32px;
+
+nav{
+display:none;
 }
+
 }
+
 </style>
 </head>
 <body>
+
 <header>
-<div class="logo">
-<img src="logo.jpeg" alt="Metro Shoes Logo">
-<h2>METRO SHOES</h2>
-</div>
+
+<img src="logo.jpeg" class="logo">
+
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
+<a href="#">Home</a>
 <a href="#collections">Collections</a>
+<a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
-<section class="hero" id="home">
+
+<section class="hero">
+
 <div class="hero-content">
-<h1>
-REAL STYLE.<br>
-<span>REAL COMFORT.</span>
-</h1>
-<p>
-Every Step Matters at Metro Shoes
-</p>
+
+<h1>REAL STYLE.<br>REAL COMFORT.</h1>
+
+<p>ONLY @ METRO SHOES</p>
+
 <a href="https://wa.me/919629028964" class="btn">
+Shop On WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<section class="categories" id="collections">
+
+<h2 class="section-title">Our Collections</h2>
+
+<img src="banner2.jpeg" class="category-banner">
+
+</section>
+
+<section class="about" id="about">
+
+<img src="shop.jpeg">
+
+<div>
+
+<h2>Metro Shoes</h2>
+
+<p>
+Step into style and comfort with Metro Shoes.
+We bring you premium quality footwear for every occasion.
+</p>
+
+<p>
+📍 #5, GPM Street, Ambapuram,
+Gudiyattam 632602
+</p>
+
+<p>
+📞 +91 9629028964
+</p>
+
+<p>
+🕘 Opening Hours:
+9:30 AM – 9:30 PM
+</p>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>📞 +91 9629028964</p>
+
+<p>📍 Ambapuram, Gudiyattam</p>
+
+<p>🕘 9:30 AM – 9:30 PM</p>
+
+</section>
+
+<footear>
+
+<h3>METRO SHOES</h3>
+
+<p>Real Style. Real Comfort.</p>
+
+</footear>
+
+<a class="whatsapp" href="https://wa.me/919629028964">
 WhatsApp Us
 </a>
-</div>
-</section>
-<section class="section" id="about">
-<h2 class="title">Welcome To Metro Shoes</h2>
-<div class="about">
-<img src="shop.jpeg" alt="Metro Shoes Shop">
-<div class="about-text">
-<h3>Step Into Style</h3>
-<p>
-Metro Shoes offers premium footwear collections for Men, Women and Kids.
-Experience quality, comfort and fashion under one roof.
-</p>
-<br>
-<p>
-✔ Comfortable Seating Available<br>
-✔ Free Wi-Fi Available<br>
-✔ Parking Facility Available<br>
-✔ Premium Quality Products
-</p>
-</div>
-</div>
-</section>
-<section class="section" id="collections">
-<h2 class="title">Our Collections</h2>
-<div class="categories">
-<div class="card">
-<h3>Sports Shoes</h3>
-<p>Performance Meets Comfort</p>
-</div>
-<div class="card">
-<h3>Casual Shoes</h3>
-<p>Everyday Style</p>
-</div>
-<div class="card">
-<h3>Formal Shoes</h3>
-<p>Professional Elegance</p>
-</div>
-<div class="card">
-<h3>Sandals</h3>
-<p>Comfort All Day Long</p>
-</div>
-<div class="card">
-<h3>Women's Collection</h3>
-<p>Walk Better. Live Better.</p>
-</div>
-</div>
-</section>
-<section class="section">
-<h2 class="title">Latest Collection</h2>
-<img src="banner2.jpeg" class="banner" alt="Metro Shoes Banner">
-</section>
-<section class="contact" id="contact">
-<h2>Contact Us</h2>
-<p>📞 +91 9629028964</p>
-<p>📧 metroshoes2022@gmail.com</p>
-<p>📍 #5, GPM Street, Ambapuram, Gudiyattam - 632602</p>
-<p>🕘 Open Daily : 9:30 AM - 9:30 PM</p>
-</section>
-<footear>
-© 2026 METRO SHOES | Real Style. Real Comfort.
-</footear>
-<a class="whatsapp" href="https://wa.me/919629028964">💬</a>
+
 </body>
 </html>
-```
